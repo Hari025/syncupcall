@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+        <link rel="stylesheet" href="{% static "testapp/end.css" %}">
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <title></title>
+  </head>
+  <body>
+    <style>
+      .jumbotron{
+        background:#32a8a6;
+      }
+      </style>
+    <div class="container">
+      <div class="jumbotron" "jf">
+      <!-- <h3>Thanks:</h3> -->
+      <p>Thanks for Joining Todays Sync up Call</p>
+      <h3>CALL INFO:{{date}}</h3>
+    </div>
+    </div>
+
+<div class="container">
+{%if truecomp%}
+
+<table class="table table-hover" border="2">
+  <thead>
+    <th>Application</th>
+    <th>Action Item</th>
+    <th>Ticket Details</th>
+    <th>Attendees</th>
+    <th>Date</th>
+    </thead>
+    {%for tru in truecomp%}
+      <tr>
+        <td>{{tru.TC}}</td>
+        <td>{{tru.title}}</td>
+        <td>{{tru.content}}</td>
+        <td>{{tru.attendees}}</td>
+        <td>{{tru.date}}</td>
+      </tr>
+    {%endfor%}
+      </table>
+      {%else%}
+      <p>No records found</p>
+    {%endif%}
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static "testapp/smart.css" %}">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<title>Ticket details</title>
+</head>
+
+<body>
+<h1>Call details</h1>
+<form action="" method="POST">
+{% csrf_token %}
+<h3>SMART Userstory and CHG</h3>
+<textarea cols="100" rows="2" name="TC">
+</textarea><br/>
+<h3>Action Item</h3>
+<textarea cols="100" rows="2" name="title">
+  </textarea><br/>
+  <h3>Date</h3>
+<input type="date" name="date"/><br>
+
+<h3>Ticket Details</h3>
+<textarea cols="100" rows="2" name="content">
+</textarea><br/>
+<h3>Critical Issues</h3>
+Yes:<input type="radio" name="check" value="Yes">
+No:<input type="radio" name="check" value="No">
+<h3>Attendees</h3>
+<textarea cols="100" rows="2" name="attendees">
+</textarea><br><br><br>
+<input type="submit" value="Post"/>
+</form>
+</body>
+
+</html>

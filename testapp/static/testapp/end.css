@@ -1,0 +1,36 @@
+
+table{
+  color:#3c32a8;
+  font-size: 1.2em;
+  border:2px solid black;
+}
+th{
+  border-right-color: black;
+  font-size: 1.2em;
+
+}
+tr{
+  border: 2px solid black;
+  font-size: 1.0em;
+}
+
+body{
+ background-image: url("https://images.unsplash.com/photo-1553044707-b710ee53ffbd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+h3{
+  text-decoration: underline;
+font-size: 2em;
+  color: black;
+
+}
+
+p{
+  color: black;
+  text-transform:capitalize;
+  font-size:3em;
+}
